@@ -97,8 +97,8 @@ code {
 
 /* Styles for Recipe Page */
 .recipeContainer {
-  height: auto; /* Adjust height if necessary */
-  margin: auto;
+  min-height: 100vh; /* Allows content to grow beyond viewport */
+  width: 100vw; /* Full width */
   display: flex; /* Use flexbox for side-by-side layout */
   gap: 20px; /* Space between image and description */
   justify-content: center; /* Center the content */
@@ -107,6 +107,8 @@ code {
   padding: 32px;
   border-radius: 8px; /* Rounded corners */
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+  box-sizing: border-box; /* Ensures padding is included in width calculations */
+  flex-wrap: wrap; /* Prevents layout break on smaller screens */
 }
 
 .recipeContainer img {
@@ -233,3 +235,5 @@ body {
   display: inline-block;
   box-shadow: 0px 0px 10px rgba(255, 0, 0, 0.2);
 }
+
+
